@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Create</title>
 </head>
 <body>
-    {{ $posts }}
+    <form method="POST" action="{{ route('add-post') }}">
+    <input type="text" name="title" placeholder="title">
+    <input type="text" name="body" placeholder="body">
+    </form>
 </body>
 </html>
