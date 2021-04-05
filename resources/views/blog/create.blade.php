@@ -9,8 +9,8 @@
 <body>
     <form method="POST" action="{{ route('add-post') }}">
     @csrf
-    <input type="text" name="title" placeholder="title">
-    <input type="text" name="body" placeholder="body">
+    <input type="text" name="title" placeholder="body">
+    <input type="text" name="body" placeholder="title">
     <button type="submit">Send</button>
     </form>
 </body>

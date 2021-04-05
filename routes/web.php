@@ -7,6 +7,9 @@ use App\Models\Post;
 
 use App\Http\Controllers\BlogController;
 
+use App\Http\Controllers\ProfileController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,7 +50,10 @@ Route::post('post/create1', [BlogController::class, 'store'])->name('add-post');
 
 Route::get('post/{id}', [BlogController::class, 'get_post']);
 
+Route::get('/profile', [ProfileController::class, 'index']);
 
+Route::post('/profile', [ProfileController::class, 'add'])->name('addprofile');
 
+Route::get('/profile/{profile_id}', [ProfileController::class, 'showProfile']);
 
-
+Route::get('/profiles', [ProfileController::class, 'showProfiles']);
