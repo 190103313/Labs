@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogController;
 
 use App\Http\Controllers\ProfileController;
 
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,5 @@ Route::post('/profile', [ProfileController::class, 'add'])->name('addprofile');
 Route::get('/profile/{profile_id}', [ProfileController::class, 'showProfile']);
 
 Route::get('/profiles', [ProfileController::class, 'showProfiles']);
+
+Route::get('/mail/send', [MailController::class, 'send']);
